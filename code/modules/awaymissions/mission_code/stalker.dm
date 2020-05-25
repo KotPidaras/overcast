@@ -26,7 +26,6 @@
 	ambient_background = list('sound/stalker/ambience/sidor_music2.ogg', 'sound/stalker/ambience/sidor_music2.ogg', 'sound/stalker/ambience/sidor_music2.ogg', 'sound/stalker/ambience/sidor_music2.ogg')//list('sound/stalker/ambience/sidor_music.ogg','sound/stalker/ambience/sidor_music2.ogg')
 	ambient_background_cooldown = list(700, 700, 700, 700)
 	environment = ENVIRONMENT_SIDOROVICH_BASEMENT
-	safezone = 1
 
 /area/stalker/blowout
 	requires_power = 1
@@ -81,7 +80,6 @@
 	icon = 'icons/stalker/areas_outdoor_blowout.dmi'
 	icon_state = "outdoor"
 	environment = ENVIRONMENT_OUTDOORS
-	safezone = 1
 
 /area/stalker/blowout/outdoor/safezone/bar
 	name = "Bar Outdoor Safezone"
@@ -102,7 +100,6 @@
 	icon_state = "buildings"
 	requires_power = 1
 	environment = ENVIRONMENT_BUILDINGS
-	safezone = 1
 
 /area/stalker/buildings
 	name = "Buildings"
@@ -163,37 +160,33 @@
 	icon_state = "substation"
 
 
-///////////////////////«¿“ŒÕ - — ¿ƒŒ¬— /////////////////////////
+///////////////////////√á√Ä√í√é√ç - √ë√ä√Ä√Ñ√é√Ç√ë√ä/////////////////////////
 /area/stalker/buildings/backwater/skadovsk
 	name = "Backwater - Skadovsk \[NB\]"
 	icon_state = "skadovsk"
-	safezone = 1
 	environment = 0
 	ambient_music = list()
 
 /area/stalker/buildings/backwater/skadovsk_respawn
 	name = "Backwater - Skadovsk (2nd floor) \[NB\]"
 	icon_state = "skadovsk"
-	safezone = 1
 	environment = 0
 	ambient_music = list()
 
 /area/stalker/blowout/buildings/backwater/skadovsk
 	name = "Backwater - Skadovsk"
 	icon_state = "skadovsk"
-	safezone = 1
 	environment = 0
 	ambient_music = list()
 
 /area/stalker/blowout/outdoor/backwater/skadovsk
 	name = "Backwater - Skadovsk \[O\]"
 	icon_state = "skadovsk"
-	safezone = 1
 	environment = 19
 
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - ÿ≈¬◊≈Õ Œ/////////////////////////
+///////////////////////√á√Ä√í√é√ç - √ò√Ö√Ç√ó√Ö√ç√ä√é/////////////////////////
 /area/stalker/buildings/backwater/shevchenko
 	name = "Backwater - Shevchenko \[NB\]"
 	icon_state = "shevchenko"
@@ -209,7 +202,7 @@
 	icon_state = "shevchenko"
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - —√Œ–≈¬ÿ»… ’”“Œ–//////////////////
+///////////////////////√á√Ä√í√é√ç - √ë√É√é√ê√Ö√Ç√ò√à√â √ï√ì√í√é√ê//////////////////
 /area/stalker/buildings/backwater/burntfarm
 	name = "Backwater - Burnt Farmstead \[NB\]"
 	icon_state = "burntfarm"
@@ -223,7 +216,7 @@
 	icon_state = "burntfarm"
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - ∆≈À≈«Õ€… À≈—///////////////////
+///////////////////////√á√Ä√í√é√ç - √Ü√Ö√ã√Ö√á√ç√õ√â √ã√Ö√ë///////////////////
 /area/stalker/buildings/backwater/ironforest
 	name = "Backwater - Iron Forest \[NB\]"
 	icon_state = "ironforest"
@@ -279,7 +272,7 @@
 	icon_state = "ironforest"
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - ¬Õ«  –”√///////////////////
+///////////////////////√á√Ä√í√é√ç - √Ç√ç√á √ä√ê√ì√É///////////////////
 /area/stalker/buildings/backwater/krug
 	name = "Backwater - Krug Antenna Complex \[NB\]"
 	icon_state = "krug"
@@ -337,7 +330,7 @@
 	icon_state = "krug"
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - À≈—Œœ»À ¿///////////////////
+///////////////////////√á√Ä√í√é√ç - √ã√Ö√ë√é√è√à√ã√ä√Ä///////////////////
 /area/stalker/buildings/backwater/sawmill
 	name = "Backwater - Sawmill \[NB\]"
 	icon_state = "sawmill"
@@ -351,7 +344,7 @@
 	icon_state = "sawmill"
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - À≈—Õ»◊≈—“¬Œ///////////////////
+///////////////////////√á√Ä√í√é√ç - √ã√Ö√ë√ç√à√ó√Ö√ë√í√Ç√é///////////////////
 /area/stalker/buildings/backwater/ranger
 	name = "Backwater - Ranger Station \[NB\]"
 	icon_state = "ranger"
@@ -365,7 +358,7 @@
 	icon_state = "ranger"
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - —“¿Õ÷»ﬂ œ≈–≈–¿¡Œ“ » Œ“’ŒƒŒ¬///////////////////
+///////////////////////√á√Ä√í√é√ç - √ë√í√Ä√ç√ñ√à√ü √è√Ö√ê√Ö√ê√Ä√Å√é√í√ä√à √é√í√ï√é√Ñ√é√Ç///////////////////
 /area/stalker/buildings/backwater/waste
 	name = "Backwater - Waster Processing Station \[NB\]"
 	icon_state = "waste"
@@ -381,7 +374,7 @@
 
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - —“¿Õ÷»ﬂ œ≈–≈–¿¡Œ“ » Œ“’ŒƒŒ¬///////////////////
+///////////////////////√á√Ä√í√é√ç - √ë√í√Ä√ç√ñ√à√ü √è√Ö√ê√Ö√ê√Ä√Å√é√í√ä√à √é√í√ï√é√Ñ√é√Ç///////////////////
 /area/stalker/buildings/backwater/waste
 	name = "Backwater - Waster Processing Station \[NB\]"
 	icon_state = "waste"
@@ -395,7 +388,7 @@
 	icon_state = "waste"
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ -  Œ√Œ“‹///////////////////
+///////////////////////√á√Ä√í√é√ç - √ä√é√É√é√í√ú///////////////////
 /area/stalker/buildings/backwater/claw
 	name = "Backwater - Claw \[NB\]"
 	icon_state = "claw"
@@ -409,7 +402,7 @@
 	icon_state = "claw"
 ////////////////////////////////////////////////////////////////
 
-///////////////////////«¿“ŒÕ - ﬁ∆ÕŒ≈ œÀ¿“Œ///////////////////
+///////////////////////√á√Ä√í√é√ç - √û√Ü√ç√é√Ö √è√ã√Ä√í√é///////////////////
 /area/stalker/buildings/backwater/plateau
 	name = "Backwater - Southern Plateau \[NB\]"
 	icon_state = "plateau"
@@ -466,7 +459,7 @@
 ////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	/// Œ–ƒŒÕ\\\
+	///√ä√é√ê√Ñ√é√ç\\\
 
 
 /area/stalker/kordon
@@ -533,7 +526,7 @@
 	icon_state = "tunnel"
 
 
-	///—¬¿À ¿\\\
+	///√ë√Ç√Ä√ã√ä√Ä\\\
 
 
 /area/stalker/svalka
@@ -564,7 +557,7 @@
 	icon_state = "tunnel"
 
 
-	///¿√–Œœ–ŒÃ\\\
+	///√Ä√É√ê√é√è√ê√é√å\\\
 
 
 /area/stalker/agroprom
@@ -638,7 +631,7 @@
 	ambient_environment_cooldown = 800
 	environment = 8
 
-	///¡¿–, ﬂÕ“¿–‹, ƒ» ¿ﬂ “≈––»“Œ–»ﬂ///
+	///√Å√Ä√ê, √ü√ç√í√Ä√ê√ú, √Ñ√à√ä√Ä√ü √í√Ö√ê√ê√à√í√é√ê√à√ü///
 
 
 /area/stalker/byadt
