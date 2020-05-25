@@ -33,9 +33,6 @@
 /mob/living/bullet_act(obj/item/projectile/P, def_zone)
 	var/armor = run_armor_check(def_zone, P.flag, "","",P.armour_penetration)
 	if(!P.nodamage)
-		if(!get_area(src).safezone)
-			apply_damage(P.damage, P.damage_type, def_zone, armor)
-	return P.on_hit(src, armor, def_zone)
 
 /proc/vol_by_throwforce_and_or_w_class(obj/item/I)
 		if(!I)
