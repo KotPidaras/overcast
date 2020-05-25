@@ -110,9 +110,6 @@ Sorry Giacom. Please don't be mad :(
 		M.pass_flags |= PASSMOB
 		pass_flags |= PASSMOB
 
-		if(get_area(oldloc).safezone == get_area(oldMloc).safezone)
-			M.Move(oldloc)
-			Move(oldMloc)
 
 		if(!src_passmob)
 			pass_flags &= ~PASSMOB
@@ -151,9 +148,6 @@ Sorry Giacom. Please don't be mad :(
 					return
 		if(pulling == AM)
 			stop_pulling()
-		if(!get_area(get_step(AM, t)).safezone && get_area(AM).safezone)
-			now_pushing = 0
-			return
 		step(AM, t)
 		now_pushing = 0
 
@@ -503,13 +497,6 @@ Sorry Giacom. Please don't be mad :(
 	return
 
 /mob/living/Move(atom/newloc, direct)
-	if((stat != DEAD) && get_area(newloc).safezone && !("stalker_forces" in faction))
-		if(src.client && (src.client.prefs.chat_toggles & CHAT_LANGUAGE))
-			src << "<span class='warning'>You can't be here!</span>"
-		else
-			src << "<span class='warning'>Вы не можете находитьc&#255; в этой зоне!</span>"
-		return 0
-
 	if (buckled && buckled.loc != newloc) //not updating position
 		if (!buckled.anchored)
 			return buckled.Move(newloc, direct)
@@ -542,11 +529,6 @@ Sorry Giacom. Please don't be mad :(
 		if(pulling && pulling.anchored)
 			stop_pulling()
 			return
-
-		if(pulling && !get_area(src).safezone && get_area(pulling).safezone)
-			stop_pulling()
-			return
-
 		if (!restrained())
 			var/diag = get_dir(src, pulling)
 			if ((diag - 1) & diag)
@@ -734,13 +716,6 @@ Sorry Giacom. Please don't be mad :(
 // The src mob is trying to strip an item from someone
 // Override if a certain type of mob should be behave differently when stripping items (can't, for example)
 /mob/living/stripPanelUnequip(obj/item/what, mob/who, where)
-	if(get_area(src.loc).safezone || get_area(who.loc).safezone)
-		if(src.client && (src.client.prefs.chat_toggles & CHAT_LANGUAGE))
-			src << "<span class='warning'>You can't unequip people in the safezone!</span>"
-		else
-			src << "<span class='warning'>Вы не можете раздевать людей в этой зоне!</span>"
-		return
-
 	if(what.flags & NODROP)
 		src << "<span class='warning'>You can't remove \the [what.name], it appears to be stuck!</span>"
 		return
@@ -1002,7 +977,7 @@ mob/living/proc/let_justice_be_done(var/mob/killed_one)
 
 	var/mob/killer = get_killer()
 
-	/*Не самая лучшая реализация
+	/*ГЌГҐ Г±Г Г¬Г Гї Г«ГіГ·ГёГ Гї Г°ГҐГ Г«ГЁГ§Г Г¶ГЁГї
 	if(istype(killed_one, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H1 = killed_one
 		var/datum/data/record/sk = find_record("sid", H1.sid, data_core.stalkers)
@@ -1012,14 +987,14 @@ mob/living/proc/let_justice_be_done(var/mob/killed_one)
 
 	if(istype(killer, /mob/living/carbon/human))
 
-		////////////////////////ПРОФИЛЬ УБИЙЦЫ///////////////////////////////////////
+		////////////////////////ГЏГђГЋГ”Г€Г‹Гњ Г“ГЃГ€Г‰Г–Г›///////////////////////////////////////
 		var/mob/living/carbon/human/killer_h = killer
 		var/datum/data/record/sk = find_record("sid", killer_h.sid, data_core.stalkers)
 		/////////////////////////////////////////////////////////////////////////////
 
 		if(istype(killed_one, /mob/living/carbon/human))
 
-			////////////////////ПРОФИЛЬ УБИТОГО//////////////////////////////////////
+			////////////////////ГЏГђГЋГ”Г€Г‹Гњ Г“ГЃГ€Г’ГЋГѓГЋ//////////////////////////////////////
 			var/mob/living/carbon/human/H = killed_one
 			var/datum/data/record/sk_H = find_record("sid", H.sid, data_core.stalkers)
 			/////////////////////////////////////////////////////////////////////////
